@@ -123,6 +123,7 @@ Library Library::deleteBook(Library library) {
     int n;
     cin >> n;
     if ((n > 0) && (n < size + 1)) {
+        cout<<"delete: "<< array[n-1]<<endl;
         Library x(size - 1);
         for (int i = 0; i < size - 1; i++) {
             if (i >= n - 1) {
@@ -132,6 +133,7 @@ Library Library::deleteBook(Library library) {
                 x[i] = library[i];
             }
         }
+
         return x;
     }
     return library;
